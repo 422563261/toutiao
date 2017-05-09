@@ -123,10 +123,10 @@ class PCHeader extends Component {
         <Row>
           <Col span={2}></Col>
           <Col span={4}>
-            <a href="/" className={style.logo}>
+            <Link to="/" className={style.logo}>
               <img src={logo} alt="logo"/>
               <span>ReactNews</span>
-            </a>
+            </Link>
           </Col>
           <Col span={16}>
             <Menu

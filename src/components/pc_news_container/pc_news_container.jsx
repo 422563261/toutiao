@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import {Row, Col, Tabs, Carousel} from 'antd';
 import style from './pc_news_container.less';
-import carousel_1 from './carousel_1.jpg';
-import carousel_2 from './carousel_2.jpg';
-import carousel_3 from './carousel_3.jpg';
-import carousel_4 from './carousel_4.jpg';
+import carousel_1 from '../../common/images/carousel_1.jpg';
+import carousel_2 from '../../common/images/carousel_2.jpg';
+import carousel_3 from '../../common/images/carousel_3.jpg';
+import carousel_4 from '../../common/images/carousel_4.jpg';
 import PCNewsBlock from '../pc_news_block/pc_news_block';
 import PCNewsImageBlock from '../pc_news_image_block/pc_news_image_block';
 

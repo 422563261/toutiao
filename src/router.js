@@ -4,9 +4,7 @@ import IndexPage from './routes/IndexPage';
 
 function RouterConfig({ history }) {
   return (
-    <Router history={history}>
-      <Route path="/" component={IndexPage} />
-    </Router>
+    <IndexPage/>
   );
 }
 

@@ -43,7 +43,7 @@ export default class PCNewsImageBlock extends Component {
     const {news} = this.state;
     const newsContent = news.length ?
       news.map((newsItem, index) => (
-          <div key={index} className={style.image_block}>
+          <div key={index} ref="imageBlock" className={style.image_block}>
             <Link to={`details/${newsItem.uniquekey}`} target="_blank">
               <div>
                 <img style={image_style} src={newsItem.thumbnail_pic_s} alt=""/>
