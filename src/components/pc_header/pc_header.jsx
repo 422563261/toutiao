@@ -66,14 +66,14 @@ class PCHeader extends Component {
         return res.json();
       })
       .then(data => {
-        this.setState({
-          userNickName: data.NickUserName,
-          userId: data.UserId,
-          hasLogin: true
-        });
-        saveLocalStorage(data.UserId, data.NickUserName, true);
         if (this.state.action === 'login') {
           this.setHasLogin(true);
+          this.setState({
+            userNickName: data.NickUserName,
+            userId: data.UserId,
+            hasLogin: true
+          });
+          saveLocalStorage(data.UserId, data.NickUserName, true);
           message.success("登陆成功！");
         } else if (this.state.action === 'register') {
           message.success("注册成功！");
