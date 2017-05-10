@@ -34,7 +34,7 @@ export default class MobileList extends Component {
           <section key={index}
                    className={style.m_article}
           >
-            <Link to={`details/${newsItem.uniquekey}`} target="_blank">
+            <Link to={`details/${newsItem.uniquekey}`}>
               <div className={style.m_article_img}>
                 <img src={newsItem.thumbnail_pic_s} alt=""/>
               </div>

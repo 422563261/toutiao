@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
-import {Row, Col, BackTop} from 'antd';
-import style from './pc_news_details.less';
-import PCHeader from '../pc_header/pc_header';
-import PCFooter  from '../pc_footer/pc_footer';
-import PCNewsImageBlock from '../pc_news_image_block/pc_news_image_block';
+import {Row, Col} from 'antd';
+import MobileHeader from '../mobile_header/mobile_header';
+import MobileFooter from '../mobile_footer/mobile_footer';
 import CommonComments from '../common_comments/common_comments';
+import style from './mobile_news_details.less';
 
-export default class PCNewsDetails extends Component {
+
+export default class MobileNewsDetails extends Component {
   constructor() {
     super();
     this.state = {
@@ -29,23 +29,18 @@ export default class PCNewsDetails extends Component {
   render() {
     return (
       <div>
-        <PCHeader/>
+        <MobileHeader/>
         <Row>
           <Col span={2}/>
-          <Col span={14} className={style.container}>
+          <Col span={20} className={style.container}>
             <div className={style.article_container}
                  dangerouslySetInnerHTML={{__html: this.state.newsItem.pagecontent}}
             ></div>
             <CommonComments uniquekey={this.props.params.uniquekey}/>
           </Col>
-          <Col span={6}>
-            <PCNewsImageBlock count={40} type="top" width="100%" cardTitle="相关新闻" gridValue="repeat(2, 1fr)"
-                              imageWidth="130px"/>
-          </Col>
           <Col span={2}/>
         </Row>
-        <PCFooter/>
-        <BackTop/>
+        <MobileFooter/>
       </div>
     );
   }

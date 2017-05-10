@@ -110,7 +110,9 @@ class PCHeader extends Component {
     const userShow = this.state.hasLogin ?
       <Menu.Item key="logout" className="register">
         <div>
-          <Button htmlType="button">{this.state.userNickName}</Button>
+          <Link to="/usercenter" target="_blank">
+            <Button htmlType="button">{this.state.userNickName}</Button>
+          </Link>
           &nbsp;&nbsp;
           <Button type="dashed" htmlType="button" onClick={() => this.logout()}>退出</Button>
         </div>

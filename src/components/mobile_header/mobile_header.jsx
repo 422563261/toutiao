@@ -35,7 +35,6 @@ class MobileHeader extends Component {
     e.preventDefault();
     e.stopPropagation();
     let formData = this.props.form.getFieldsValue();
-    console.log(formData)
     fetch("http://newsapi.gugujiankong.com/Handler.ashx?action=" + this.state.action
       + "&username=" + formData.l_userName
       + "&password=" + formData.l_password
@@ -94,7 +93,7 @@ class MobileHeader extends Component {
   render() {
     const {getFieldDecorator} = this.props.form;
     const userShow = this.state.hasLogin ?
-      <Link>
+      <Link to="/usercenter">
         <Icon type="inbox" className={style.icon}/>
       </Link>
       :
@@ -102,7 +101,9 @@ class MobileHeader extends Component {
     return (
       <div className={style.mobile}>
         <header>
-          <img src={logo} alt="logo"/>
+          <Link to="/">
+            <img src={logo} alt="logo"/>
+          </Link>
           <div className={style.title}>ReactNews</div>
           {userShow}
           <Modal title="用户中心"
